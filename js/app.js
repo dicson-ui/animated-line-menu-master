@@ -1,15 +1,14 @@
-var _tabswrap = $('.tabs-wrap');
-var _tabs = $('.tabs-wrap a');
-var _currenttab = $('.tabs-wrap a.active');
-var _tablength = _tabs.length;
-var _nthactivetab = _currenttab.attr('data-tab');
-var _hline = $('.line');
-var _linecount, _linepos;
+var _tabswrap = $('.tabs-wrap'),
+_tabs = $('.tabs-wrap a'),
+_currenttab = $('.tabs-wrap a.active'),
+_nthactivetab = _currenttab.attr('data-tab'),
+_hline = $('.line'),
+_tablength = _tabs.length,
+_linecount, _linepos;
 
 _tabs.on('click', function(e){
     e.preventDefault();
     
-
     _this = $(this);
     if(_this.hasClass('active'))
         return false;
@@ -49,3 +48,4 @@ _tabs.on('click', function(e){
     _nthactivetab = _nthtab;
     setTimeout(function(){ _tabswrap.removeClass('menurun'); }, 800);
 });
+
