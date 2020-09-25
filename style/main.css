@@ -1,0 +1,230 @@
+.github {
+    position: fixed;
+    right: -44px;
+    top: -15px;
+    width: 130px;
+    height: 70px;
+    z-index: 9;
+    transform: rotate(45deg);
+  }
+  .github:after {
+    background: #f7f7f7 url(../img/github-logo.png) no-repeat center 82%;
+    background-size: 38% auto;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .dicson {
+    position: fixed;
+    left: -44px;
+    top: -15px;
+    width: 130px;
+    height: 70px;
+    z-index: 9;
+    transform: rotate(-45deg);
+  }
+  .dicson:after {
+    background: #f7f7f7 url(../img/dicson-logo.jpg) no-repeat center 82%;
+    background-size: 38% auto;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html { 
+    text-align: center;
+    color: #333;
+    font-family: Arial, serif;
+    height: 100%
+}
+
+html body {
+    background: radial-gradient(ellipse at center,#5bc1a0 0,#2095a0 100%);
+    height: 100%;
+    text-align: center;
+}
+
+html body:before {
+    height: 100vh;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0px;
+}
+
+.flex-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-wrap .wrap {
+    padding: 30px 0px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 1em;
+    color: #fff;
+    text-shadow: 2px 2px 0px #2297a0;
+}
+
+.tabs-wrap {
+    position: relative;
+    display: inline-block
+}
+
+.tabs-wrap:after {
+    content: '';
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+.tabs-wrap.menurun:before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.tabs-wrap.menurun .line {
+    -webkit-animation: moveline 0.7s cubic-bezier(0, 0.38, 0.06, 0.44);
+            animation: moveline 0.7s cubic-bezier(0, 0.38, 0.06, 0.44);
+}
+
+.tabs-wrap .line {
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+}
+
+.tabs-wrap .svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tabs-wrap .svg path {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+    fill-rule: evenodd;
+    stroke-dasharray: 552px;
+    stroke-dashoffset: 552px;
+    -webkit-transition: stroke-dashoffset 0.05s ease;
+    transition: stroke-dashoffset 0.05s ease;
+}
+
+.tabs-wrap.rtol .active path {
+    stroke-dashoffset: 1104px;
+}
+
+.tabs-wrap.rtol .line {
+    -webkit-transform-origin: center right;
+            transform-origin: center right;
+}
+
+.tabs-wrap.ltor .active path {
+    stroke-dashoffset: 0px;
+}
+
+.tabs-wrap.ltor .line {
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+}
+
+.tabs-wrap .tab {
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 209px;
+    height: 58px;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 23px;
+    line-height: 59px;
+}
+
+.tabs-wrap .tab span {
+    display: block;
+    margin: 0px 30px;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.tabs-wrap .tab.active:active span {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+
+.tabs-wrap .tab:active span {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+}
+
+.tabs-wrap .tab:after {
+    content: '';
+    background-color: #fff;
+    height: 3px;
+    width: 1px;
+    position: absolute;
+    opacity: 0.8;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+}
+
+.tabs-wrap .active {
+    cursor: default;
+}
+
+.tabs-wrap .active path {
+    -webkit-transition: stroke-dashoffset 0.6s ease;
+    transition: stroke-dashoffset 0.6s ease;
+}
+
+.tabs-wrap .active.tab:after {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+
+@-webkit-keyframes moveline {
+    0% { -webkit-transform: scaleX(1); transform: scaleX(1); }
+    100% { -webkit-transform: scaleX(0); transform: scaleX(0); }
+}
+
+@keyframes moveline {
+    0% { -webkit-transform: scaleX(1); transform: scaleX(1); }
+    100% { -webkit-transform: scaleX(0); transform: scaleX(0); }
+}
