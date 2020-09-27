@@ -1,37 +1,3 @@
-.github {
-    position: fixed;
-    right: -44px;
-    top: -15px;
-    width: 130px;
-    height: 70px;
-    z-index: 9;
-    transform: rotate(45deg);
-  }
-  .github:after {
-    background: #f7f7f7 url(../img/github-logo.png) no-repeat center 82%;
-    background-size: 38% auto;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .dicson {
-    position: fixed;
-    left: -44px;
-    top: -15px;
-    width: 130px;
-    height: 70px;
-    z-index: 9;
-    transform: rotate(-45deg);
-  }
-  .dicson:after {
-    background: #f7f7f7 url(../img/dicson-logo.jpg) no-repeat center 82%;
-    background-size: 38% auto;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
 
 * {
     margin: 0;
@@ -59,7 +25,40 @@ html body:before {
     vertical-align: middle;
     width: 0px;
 }
-
+.github {
+    position: fixed;
+    right: -44px;
+    top: -15px;
+    width: 130px;
+    height: 70px;
+    z-index: 9;
+    transform: rotate(45deg);
+}
+.github:after {
+    background: #f7f7f7 url(../img/github-logo.png) no-repeat center 82%;
+    background-size: 38% auto;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.dicson {
+    position: fixed;
+    left: -44px;
+    top: -15px;
+    width: 130px;
+    height: 70px;
+    z-index: 9;
+    transform: rotate(-45deg);
+}
+.dicson:after {
+    background: #f7f7f7 url(../img/dicson-logo.jpg) no-repeat center 82%;
+    background-size: 38% auto;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 .flex-wrap {
     height: 100vh;
     display: flex;
