@@ -1,5 +1,5 @@
 # Animated Line Menu
-Animated Line Menu using svg stroke animation. [Demo Here](http://dicson.in/widgets/animated-line-menu)
+Animated Line Menu using svg stroke animation. [Demo Here](https://dicson-ui.github.io/animated-line-menu-master/)
 
 You can add and romove the Button count.
 
